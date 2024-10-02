@@ -8,7 +8,7 @@ Live Site Link
 
 ## 🎨 Project Showcase
 Check out a glimpse of the project in action:
-![Project Screenshot](./public/image/Capture.JPG)
+![🛒 Project Screenshot](./public/image/Capture.JPG)
 
 ## 🛠️ Technologies Used
 - Next.js: Framework for server-rendered React applications.
