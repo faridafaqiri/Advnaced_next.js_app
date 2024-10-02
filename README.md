@@ -4,7 +4,7 @@ Welcome to our E-Commerce Store project built with Next.js and Tailwind CSS. Thi
 
 ## 🌍 Live Demo
 Check out the live version of the website:
-Live Site Link
+(https://deploy-preview-1--sage-lamington-18e73d.netlify.app)
 
 ## 🎨 Project Showcase
 Check out a glimpse of the project in action:
