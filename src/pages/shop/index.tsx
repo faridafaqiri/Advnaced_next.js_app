@@ -1,5 +1,6 @@
 // src/pages/shop/index.tsx
 import { GetStaticProps } from 'next';
+import Image from 'next/image'; // Import Image from Next.js
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -34,7 +35,13 @@ const Shop: React.FC<ShopProps> = ({ products }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {products.map((product) => (
             <div key={product.id} className="border p-4 rounded-lg">
-              <img src={product.image} alt={product.title} className="w-full h-48 object-cover mb-4" />
+              <Image 
+                src={product.image} 
+                alt={product.title} 
+                width={300} // Set the width as needed
+                height={300} // Set the height as needed
+                className="mb-4 object-cover" 
+              />
               <h2 className="text-2xl font-bold">{product.title}</h2>
               <p className="text-lg font-semibold">${product.price}</p>
             </div>
