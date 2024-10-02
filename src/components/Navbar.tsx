@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 const Navbar: React.FC = () => {
   const [search, setSearch] = useState('');
-  const [isOpen, setIsOpen] = useState(false); // State for the hamburger menu
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement search logic here if needed
+    // Add search logic here if needed
   };
 
   return (
@@ -42,6 +42,8 @@ const Navbar: React.FC = () => {
           <li className="p-2 text-center"><Link href="/shop">Shop</Link></li>
           <li className="p-2 text-center"><Link href="/pricing">Pricing</Link></li>
           <li className="p-2 text-center"><Link href="/whats-new">What's New</Link></li>
+          <li className="p-2 text-center"><Link href="/login">Login</Link></li>
+          <li className="p-2 text-center"><Link href="/signup">Sign Up</Link></li>
           <li className="p-2 text-center"><Link href="/contact">Contact</Link></li>
         </ul>
       </div>
