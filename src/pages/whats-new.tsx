@@ -59,8 +59,8 @@ const WhatsNew = () => {
               <Image
                 src={product.image}
                 alt={product.title}
-                width={200}
-                height={200}
+                width={150}
+                height={150}
                 className="object-cover rounded-lg"
               />
               <p className="mt-2 text-gray-700">${product.price}</p>
