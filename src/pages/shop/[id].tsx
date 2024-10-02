@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Image from 'next/image'; // Import the Next.js Image component
 
 interface Product {
   id: number;
@@ -42,11 +43,17 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
       <Navbar />
       <main className="container mx-auto mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <img src={product.image} alt={product.title} className="w-full h-auto object-cover rounded-lg" />
+          <Image
+            src={product.image}
+            alt={product.title}
+            width={500} // Specify the width for the image
+            height={500} // Specify the height for the image
+            className="w-full h-auto object-cover rounded-lg" // Use className for Tailwind CSS styles
+          />
           <div>
             <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
             <p className="text-lg mb-4">{product.description}</p>
-            <p className="text-2xl font-bold mb-4">${product.price}</p>
+            <p className="text-2xl font-bold mb-4">${product.price.toFixed(2)}</p>
           </div>
         </div>
       </main>
