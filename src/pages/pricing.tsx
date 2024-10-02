@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Image from 'next/image'; // Import Next.js Image component
 
 // Define a TypeScript interface for products
 interface Product {
@@ -48,7 +49,13 @@ const WhatsNewPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {products.map((product) => (
             <div key={product.id} className="border p-4 rounded shadow flex items-center">
-              <img src={product.image} alt={product.title} className="w-16 h-16 mr-4" />
+              <Image
+                src={product.image}
+                alt={product.title}
+                width={64}
+                height={64}
+                className="mr-4"
+              />
               <div>
                 <h2 className="text-xl font-semibold">{product.title}</h2>
                 <p className="text-lg">${product.price.toFixed(2)}</p>
