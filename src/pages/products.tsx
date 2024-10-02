@@ -1,6 +1,5 @@
-// pages/products.tsx
-
 import { GetStaticProps } from 'next';
+import Image from 'next/image'; // Import Next.js Image component
 
 interface Product {
   id: number;
@@ -19,31 +18,45 @@ interface Props {
 
 const ProductsPage: React.FC<Props> = ({ products, newProducts, error }) => {
   if (error) {
-    return <div style={{ color: 'red' }}>Error: {error}</div>;
+    return <div className="text-red-500">Error: {error}</div>;
   }
 
   return (
-    <div>
-      <h1>Products</h1>
-      <h2>What's New</h2>
-      <ul>
-        {newProducts.map(product => (
-          <li key={product.id}>
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-            <p>Price: ${product.price.toFixed(2)}</p>
-            <img src={product.image} alt={product.title} style={{ maxWidth: '200px' }} />
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Products</h1>
+
+      <h2 className="text-2xl font-semibold mt-6">What&apos;s New</h2>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {newProducts.map((product) => (
+          <li key={product.id} className="border rounded-lg p-4 shadow-lg">
+            <h3 className="text-lg font-semibold">{product.title}</h3>
+            <p className="mt-2">{product.description}</p>
+            <p className="mt-2 font-bold">Price: ${product.price.toFixed(2)}</p>
+            <Image
+              src={product.image}
+              alt={product.title}
+              width={200}
+              height={200}
+              className="mt-2 max-w-full h-auto rounded"
+            />
           </li>
         ))}
       </ul>
-      <h2>All Products</h2>
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-            <p>Price: ${product.price.toFixed(2)}</p>
-            <img src={product.image} alt={product.title} style={{ maxWidth: '200px' }} />
+
+      <h2 className="text-2xl font-semibold mt-6">All Products</h2>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {products.map((product) => (
+          <li key={product.id} className="border rounded-lg p-4 shadow-lg">
+            <h3 className="text-lg font-semibold">{product.title}</h3>
+            <p className="mt-2">{product.description}</p>
+            <p className="mt-2 font-bold">Price: ${product.price.toFixed(2)}</p>
+            <Image
+              src={product.image}
+              alt={product.title}
+              width={200}
+              height={200}
+              className="mt-2 max-w-full h-auto rounded"
+            />
           </li>
         ))}
       </ul>
@@ -58,8 +71,6 @@ export const getStaticProps: GetStaticProps = async () => {
       throw new Error('Failed to fetch data');
     }
     const products = await res.json();
-
-    // Assuming the last 3 products are "new"
     const newProducts = products.slice(-3);
 
     return {
