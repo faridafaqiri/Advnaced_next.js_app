@@ -9,10 +9,9 @@ Live Site Link
 
 ## Demo Video
 
-<video controls width="640" height="360">
-  <source src="public/vedio/localhost_3000.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+🎥 Demo Video
+You can watch the demo video [here](./public/vedio/localhost_3000.mp4).
+
 
 
 
