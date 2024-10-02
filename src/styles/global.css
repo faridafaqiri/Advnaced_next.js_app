@@ -1,0 +1,30 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px; /* Adjust as necessary */
+  margin: 0 auto;
+  padding: 0 1rem; /* Responsive padding */
+}
+
+nav, footer {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  nav, footer {
+    padding: 1rem; /* Adjust padding for mobile */
+  }
+  
+  .flex {
+    flex-direction: column; /* Stack items on small screens */
+  }
+}
