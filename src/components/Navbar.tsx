@@ -7,16 +7,18 @@ const Navbar: React.FC = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add search logic here if needed
+    console.log('Searching for:', search);
   };
 
   return (
     <nav className="bg-gray-800 p-4 relative">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Logo */}
         <div className="text-white text-lg font-bold mb-2 md:mb-0">
           <Link href="/">E-Commerce</Link>
         </div>
 
+        {/* Search Form */}
         <form onSubmit={handleSearch} className="flex flex-col md:flex-row items-center mb-2 md:mb-0">
           <input
             type="text"
@@ -30,6 +32,7 @@ const Navbar: React.FC = () => {
           </button>
         </form>
 
+        {/* Mobile Menu Toggle */}
         <button 
           onClick={() => setIsOpen(!isOpen)} 
           className="md:hidden text-white focus:outline-none"
@@ -37,11 +40,12 @@ const Navbar: React.FC = () => {
           {isOpen ? 'Close' : 'Menu'}
         </button>
 
+        {/* Navigation Links */}
         <ul className={`flex-col md:flex md:flex-row md:space-x-4 text-white absolute md:static bg-gray-800 md:bg-transparent transition-all duration-300 ${isOpen ? 'block' : 'hidden'} md:block top-full left-0 w-full md:w-auto z-20`}>
           <li className="p-2 text-center"><Link href="/">Home</Link></li>
           <li className="p-2 text-center"><Link href="/shop">Shop</Link></li>
           <li className="p-2 text-center"><Link href="/pricing">Pricing</Link></li>
-          <li className="p-2 text-center"><Link href="/whats-new">What's New</Link></li>
+          <li className="p-2 text-center"><Link href="/whats-new">What&apos;s New</Link></li>
           <li className="p-2 text-center"><Link href="/login">Login</Link></li>
           <li className="p-2 text-center"><Link href="/signup">Sign Up</Link></li>
           <li className="p-2 text-center"><Link href="/contact">Contact</Link></li>
