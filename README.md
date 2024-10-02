@@ -3,20 +3,14 @@
 Welcome to our E-Commerce Store project built with Next.js and Tailwind CSS. This project demonstrates how to build a modern, responsive e-commerce website that includes dynamic routing, API integration, and server-side rendering (SSR) for real-time data fetching.
 
 ## 🌍 Live Demo
-
 Check out the live version of the website:
 Live Site Link
 
-## Demo Video
-
-🎥 Demo Video
-You can watch the demo video [here](./public/vedio/localhost_3000.mp4).
-
-
-
+## 🎨 Project Showcase
+Check out a glimpse of the project in action:
+![Project Screenshot](./public/image/Capture.JPG)
 
 ## 🛠️ Technologies Used
-
 - Next.js: Framework for server-rendered React applications.
 - TypeScript: Strongly typed JavaScript for better code quality.
 - Tailwind CSS: Utility-first CSS framework for styling.
@@ -24,7 +18,6 @@ You can watch the demo video [here](./public/vedio/localhost_3000.mp4).
 - SSG/SSR: Static Site Generation and Server-Side Rendering for faster page loads.
 
 ## 🌟 Features
-
 - Responsive Design: Works across mobile, tablet, and desktop devices.
 - Dynamic Routing: Product pages are dynamically generated based on URL parameters.
 - API Integration: Products fetched from Fake Store API.
@@ -32,7 +25,6 @@ You can watch the demo video [here](./public/vedio/localhost_3000.mp4).
 - Server-Side Rendering (SSR): Real-time data fetching for product details.
 
 ## 🚀 Getting Started
-
 Follow these steps to run the project locally.
 
 1. Clone the Repository
@@ -52,11 +44,9 @@ npm run build
 npm run start
 
 ## 📦 API Integration
-
 We use the Fake Store API for fetching product data. You can see product images, prices, and descriptions dynamically displayed on the product pages.
 
 ## 👩‍💻 Author
-
 You can contact me through the following:
 LinkedIn: (https://www.linkedin.com/in/farida-faqiri-071a31309/)
 
